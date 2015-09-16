@@ -3,6 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
@@ -101,6 +102,11 @@
 
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
     <string>100</string>
+    </gap:config-file>
+    
+    <!-- Enable Chrome debugging (requires xmlns:android="http://schemas.android.com/apk/res/android"): https://www.genuitec.com/products/gapdebug/learning-center/configuration/ -->
+    <gap:config-file platform="android" parent="/manifest">
+        <application android:debuggable="true" />
     </gap:config-file>
 
     <!--
